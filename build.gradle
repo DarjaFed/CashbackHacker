@@ -5,16 +5,21 @@ plugins {
 group 'ru.netology'
 version '1.0-SNAPSHOT'
 
+java {
+    sourceCompatibility = 11
+}
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/org.testng/testng
-    testImplementation group: 'org.testng', name: 'testng', version: '7.10.2'
+    testImplementation 'junit:junit:4.13.2'
 
 }
 
 test {
-    useTestNG()
+    useJUnit()
 }
