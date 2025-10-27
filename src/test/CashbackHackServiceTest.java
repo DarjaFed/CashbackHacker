@@ -1,9 +1,9 @@
 package ru.netology.service;
 
-import org.junit.annotations.BeforeMethod;
-import org.junit.annotations.Test;
+import org.testing.annotations.BeforeMethod;
+import org.testing.annotations.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.testing.Assert.assertEquals;
 
 public class CashbackHackServiceTest {
 
@@ -14,7 +14,7 @@ public class CashbackHackServiceTest {
         service = new CashbackHackService();
     }
 
-    @org.junit.Test
+    @org.testng.annotations.Test
     public void shouldReturnZeroForAmount1000() {
         int amount = 1000;
         int actual = service.remain(amount);
@@ -22,7 +22,7 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @org.junit.Test
+    @org.testng.annotations.Test
     public void shouldReturnOneForAmount999() {
         int amount = 999;
         int actual = service.remain(amount);
@@ -30,7 +30,7 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @org.junit.Test
+    @org.testng.annotations.Test
     public void shouldReturn999ForAmount1001() {
         int amount = 1001;
         int actual = service.remain(amount);
@@ -38,7 +38,7 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @org.junit.Test
+    @org.testng.annotations.Test
     public void shouldReturn500ForNegativeAmount() {
         int amount = -500;
         int actual = service.remain(amount);
@@ -46,7 +46,7 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @org.junit.Test
+    @org.testng.annotations.Test
     public void shouldReturn1000ForZeroAmount() {
         int amount = 0;
         int actual = service.remain(amount);
@@ -54,7 +54,7 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @org.junit.Test
+    @org.testng.annotations.Test
     public void shouldReturn500ForLargeNumber() {
         int amount = 1000500;
         int actual = service.remain(amount);
